@@ -6,6 +6,8 @@ networks:
 
 services:
   postgresql:
+    environment:
+      - POSTGRESQL_PASSWORD=ROOTPASSWD
     image: 'bitnami/postgresql:latest'
     networks:
       - app-tier
