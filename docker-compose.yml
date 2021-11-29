@@ -20,6 +20,8 @@ services:
       - "5432"
   myapp:
     image: 'python:latest'
+    build:
+      context: ./pythonapp
     networks:
       - app-tier
   pgadmin:
