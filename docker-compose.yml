@@ -12,7 +12,7 @@ services:
     networks:
       - app-tier
     expose:
-      - "5432/TCP"
+      - "5432"
   myapp:
     image: 'python:latest'
     networks:
