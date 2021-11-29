@@ -9,6 +9,8 @@ services:
     environment:
       - POSTGRESQL_PASSWORD=${ROOTPASSWD}
     image: 'bitnami/postgresql:latest'
+    volumes:
+      - posdata:/bitnami/postgresql:rw
     networks:
       - app-tier
     expose:
