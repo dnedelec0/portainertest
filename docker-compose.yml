@@ -1,5 +1,8 @@
 version: '2'
 
+volumes:
+  posdata:
+
 networks:
   app-tier:
     driver: bridge
