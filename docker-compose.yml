@@ -11,7 +11,18 @@ services:
     image: 'bitnami/postgresql:latest'
     networks:
       - app-tier
+    ports:
+      - 5432:5432
   myapp:
     image: 'python:latest'
     networks:
       - app-tier
+  pgadmin:
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGEMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGPASSWD}
+    image: 'dpage/pgadmin4'
+    networks:
+      - app-tier
+    ports:
+      - 80:80
